@@ -1,7 +1,7 @@
 
 <?php
-session_start();
-$id = $_SESSION['id'];
+
+$id = $_POST['id'];
 $url = "http://localhost/php-api-practice/api/post/update.php?id=$id";
 
 $ch = curl_init($url);

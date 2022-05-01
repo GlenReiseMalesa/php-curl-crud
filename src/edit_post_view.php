@@ -3,8 +3,8 @@
 
 //reading a single post
     $id = $_GET["id"];//getting data from the url
-    session_start();
-    $_SESSION['id'] = $id;
+    // session_start();
+    // $_SESSION['id'] = $id;
     $ch = curl_init();
     
     curl_setopt($ch, CURLOPT_URL, "http://localhost/php-api-practice/api/post/read_single.php?id=$id");
@@ -40,6 +40,7 @@
 <?php //edit post ?>
 
 <form method="post" action="func_update_post.php">
+  <input type="hidden" id="id" name="id" value="<?= $data['id'] ?>">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">title</label>
     <input type="text" class="form-control" id="title" name="title" value="<?= $data['title'] ?>" aria-describedby="emailHelp">

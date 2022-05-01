@@ -18,7 +18,7 @@
    $post = new Post($db);
 
 
-   $post->id = "37";
+   $post->id = $_GET['id'];
 
 
    // delete post

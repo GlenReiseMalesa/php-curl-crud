@@ -136,8 +136,8 @@
               $stmt = $this->conn->prepare($query);
 
               // clean data
-              $this->id = htmlspecialchars(strip_tags($this->id));
-
+              $stmt->bindParam(':id', $this->id);
+             
               // execute query
               if($stmt->execute()){
                 return true;
