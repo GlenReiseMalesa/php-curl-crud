@@ -59,15 +59,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
 <a href="new_post_view.php">New</a>
    
     
