@@ -17,10 +17,8 @@
    // Instantiate blog post object
    $post = new Post($db);
 
-   // get raw posted data
-   $data = json_decode(file_get_contents("php://input"));
 
-   $post->id = $data->id;
+   $post->id = "37";
 
 
    // delete post

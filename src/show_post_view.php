@@ -45,31 +45,13 @@
     </a>
 
 
-    <?php //edit post ?>
+    <?php //delete post ?>
+    <br>
+    <a href="func_delete_post.php?id=<?= $data["id"]?>">
+      delete
+    </a>
 
-<form method="post" action="func_update_post.php">
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">title</label>
-    <input type="text" class="form-control" id="title" name="title" value="<?= $data['title'] ?>" aria-describedby="emailHelp">
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">body</label>
-    <input type="text" class="form-control" id="body" name="body" value="<?= $data['body'] ?>" aria-describedby="emailHelp">
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">author</label>
-    <input type="text" class="form-control" id="author" name="author" value="<?= $data['author'] ?>" aria-describedby="emailHelp">
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">category id</label>
-    <input type="text" class="form-control" id="category_id" name="category_id" value="<?= $data['category_id'] ?>" aria-describedby="emailHelp">
-  </div>
-
-
-  <button type="submit" class="btn btn-primary">update</button>
-</form>
-
-<?php //edit post ?>
+<?php //delete post ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </body>
