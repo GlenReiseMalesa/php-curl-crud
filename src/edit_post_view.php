@@ -3,7 +3,8 @@
 
 //reading a single post
     $id = $_GET["id"];//getting data from the url
-
+    session_start();
+    $_SESSION['id'] = $id;
     $ch = curl_init();
     
     curl_setopt($ch, CURLOPT_URL, "http://localhost/php-api-practice/api/post/read_single.php?id=$id");
@@ -29,23 +30,14 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title></title>
+    <title>edit post</title>
   </head>
   <body>
 
 
-    <ul class="list-group">
-        <li class="list-group-item"><?= $data['id'] ?></li>
-        <li class="list-group-item"><?= $data['title'] ?></li>
-        <li class="list-group-item"><?= $data['body'] ?></li>
-        <li class="list-group-item"><?= $data['author'] ?></li>
-    </ul>
-    <a href="edit_post_view.php?id=<?= $data["id"]?>">
-       Edit
-    </a>
 
-
-    <?php //edit post ?>
+    
+<?php //edit post ?>
 
 <form method="post" action="func_update_post.php">
   <div class="mb-3">
@@ -70,6 +62,7 @@
 </form>
 
 <?php //edit post ?>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </body>

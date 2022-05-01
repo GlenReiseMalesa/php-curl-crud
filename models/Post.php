@@ -96,7 +96,7 @@
             // update Post
             public function update(){
               // Create Query
-              $query = 'UPDATE ' . $this->table . 'SET title = :title,body = :body,author = :author,category_id = :category_id WHERE id = :id';
+              $query = 'UPDATE ' . $this->table . ' SET title = :title,body = :body,author = :author,category_id = :category_id WHERE id = :id';
       
               // prepare statement
               $stmt = $this->conn->prepare($query);

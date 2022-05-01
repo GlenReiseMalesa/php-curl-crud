@@ -23,9 +23,6 @@
  
 
    // get raw posted data
-   $rawdata = file_get_contents('php://input');
-   $data = json_decode($rawdata,true);
-
     $post->title = $_POST['title'];
     $post->body = $_POST['body'];
     $post->author = $_POST['author'];
